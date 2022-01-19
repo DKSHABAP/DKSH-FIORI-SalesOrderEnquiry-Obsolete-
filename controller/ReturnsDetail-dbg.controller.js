@@ -261,6 +261,7 @@ sap.ui.define([
 		onChangeCheckbox: function (oEvent) {
 			var personalizationData = this.FilterPersonalization.getModel("FilterPersonalization").getData().results.userPersonaDto;
 			var path = parseInt(oEvent.getSource().getBindingContext("FilterPersonalization").getPath().split("/")[3]);
+			
 			if (oEvent.getSource().getSelected() === true) {
 				for (var j = 0; j < personalizationData.length; j++) {
 					if (j === path) {
