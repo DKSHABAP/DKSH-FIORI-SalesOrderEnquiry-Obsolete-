@@ -1,0 +1,139 @@
+{
+    "resources": [
+        {
+            "name": "controller/ManageRetExch.controller.js"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "util/formatter.js"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "controller/ReturnsView.controller.js"
+        },
+        {
+            "name": "controller/ReturnsDetail.controller.js"
+        },
+        {
+            "name": "i18n/i18n_th.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_th"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "util/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ReturnsView-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ReturnsDetail-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ManageRetExch-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/App-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "view/ReturnsView.view.xml"
+        },
+        {
+            "name": "view/ReturnsDetail.view.xml"
+        },
+        {
+            "name": "view/ManageRetExch.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "fragments/purchaseOrder.fragment.xml"
+        },
+        {
+            "name": "fragments/orderType.fragment.xml"
+        },
+        {
+            "name": "fragments/SalesOrg.fragment.xml"
+        },
+        {
+            "name": "fragments/RejectReason.fragment.xml"
+        },
+        {
+            "name": "fragments/Personalization.fragment.xml"
+        },
+        {
+            "name": "fragments/MaterialGroup4.fragment.xml"
+        },
+        {
+            "name": "fragments/MaterialGroup.fragment.xml"
+        },
+        {
+            "name": "fragments/ItemBlock.fragment.xml"
+        },
+        {
+            "name": "fragments/HeaderBlock.fragment.xml"
+        },
+        {
+            "name": "fragments/Division.fragment.xml"
+        },
+        {
+            "name": "fragments/DistributionChannel.fragment.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "index.html"
+        }
+    ]
+}

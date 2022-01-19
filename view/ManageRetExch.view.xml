@@ -1,0 +1,516 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout" 	xmlns:f="sap.f"
+	xmlns:grid="sap.ui.layout.cssgrid" xmlns:fb="sap.ui.comp.filterbar" xmlns:vm="sap.ui.comp.variants"
+	controllerName="incture.com.cherrywork.ConnectClientSalesOrderEnquiry.controller.ManageRetExch" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+					
+		<f:DynamicPage id="dynamicPageId" headerExpanded="true">
+			<!-- DynamicPage Title -->
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<vm:VariantManagement standardItemText="Approve Orders">
+						</vm:VariantManagement>
+					</f:heading>
+				
+				</f:DynamicPageTitle>
+			</f:title>
+			<!-- DynamicPage Header -->
+			<f:header>
+				<f:DynamicPageHeader pinnable="true">
+					<f:content>
+						<fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="false">
+							<fb:filterItems>
+								<fb:FilterItem name="A" label="Name">
+									<fb:control>
+									<Text text="fdgfd"/>
+									</fb:control>				
+								</fb:FilterItem>								
+								<fb:FilterItem name="B" label="Category">
+									<fb:control>
+										<Text text="fdgfd"/>
+									</fb:control>				
+								</fb:FilterItem>				
+								<fb:FilterItem name="C" label="SupplierName">
+									<fb:control>
+									<Text text="fdgfd"/>
+									</fb:control>				
+								</fb:FilterItem>
+							</fb:filterItems>
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+
+			<!-- DynamicPage Content -->
+		
+	<f:content>
+				<Table  inset="false" fixedLayout="true"  mode="MultiSelect" id="idRet1"
+			selectionChange="onChangeSelectionItem" backgroundDesign="Solid">
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title text="Returns" level="H3"/>
+					<ToolbarSpacer/>
+					<SearchField width="30%" liveChange="onItemTableFreeSearch"></SearchField>
+					<Button icon="sap-icon://pending" type="Transparent" tooltip="{i18n>Hold}" />
+				<!--	<Button icon="sap-icon://edit" type="Transparent" tooltip="{i18n>Edit}" press="onEditItem"
+						enabled="{parts:['SalesHeaderModel>/levelNum','SalesHeaderModel>/processor','SalesHeaderModel>/taskOwner'] , formatter:'.formatter.setEditRestriction'}"/>-->
+					<!--<Button type="Transparent" text="{i18n>Save}" visible="false" press="onSaveEditItem"/>
+					<Button type="Transparent" text="{i18n>Cancel}" visible="false" press="onCancelEditItem"/>-->
+					<!--enabled="{= ${oTaskInboxModel>/workBoxDtos/processor} === ${oTaskInboxModel>/workBoxDtos/taskOwner} ? true : false}"-->
+					<Button icon="sap-icon://accept" type="Accept" tooltip="Approve" class="dkshAcceptBtnStyle" press="onApprovePress"/>
+					<Button icon="sap-icon://decline" type="Reject" tooltip="{i18n>Reject}" class="dkshRejectBtnStyle" press="onRejectPress"/>
+					<Button icon="sap-icon://upload" type="Transparent" tooltip="Submit" press="onItemSubmission"/>
+					<Button icon="sap-icon://display" type="Transparent" tooltip="DisplayActions" press="onDisplayMarkedItems"/>
+					<Button icon="sap-icon://reset" type="Transparent" tooltip="reset" press="onResetDisplay"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left"
+					class="{'version-modal-header': condition, 'failure': !condition}">
+					<HBox>
+						<Label design="Bold" text="Item No" />
+						<Button icon="sap-icon://drill-down" type="Transparent" tooltip="Sort" press="onDetailTableSortPress" class="dkshAcceptBtnStyle"/>
+					</HBox>
+				</Column>
+		
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Ref Invoice" tooltip="Material"/>
+				
+				</Column>	
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Ref Invoice Item" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Return Reason Item" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="RO Type" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Mat Grp" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Mat Grp4" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Product Code" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Amount" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="SD Block" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Order No" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left" mergeDuplicates="true">
+					
+						<Label design="Bold" text="Task ID" tooltip="Material"/>
+				
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="01"/>
+					
+						</VBox>
+						<Text  text="5320000001"/>
+						<Text  text="Item 01"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="A" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="ROSAP1" textAlign="Left"/>	
+						<Text text="T1" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+					<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="02"/>
+					
+						</VBox>
+						<Text  text="5320000001"/>
+					<Text  text="Item02"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="B" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="ROSAP1" textAlign="Left"/>	
+						<Text text="T1" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+					<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="03"/>
+					
+						</VBox>
+						<Text  text="5320000002"/>
+						<Text  text="Item03"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="E" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="ROSAP2" textAlign="Left"/>	
+						<Text text="T3" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+						<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="04"/>
+				
+						</VBox>
+						<Text  text="5320000002"/>
+						<Text  text="Item04"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="F" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="ROSAP2" textAlign="Left"/>	
+						<Text text="T3" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+						<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="05"/>
+					
+						</VBox>
+						<Text  text="5320000003"/>
+						<Text  text="Item05"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="G" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="ROSAP3" textAlign="Left"/>	
+						<Text text="T4" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+							<!--Table Containing Exchange Order Item Data-->
+		<Table  inset="false" fixedLayout="true"  mode="MultiSelect" id="idExc1"
+			selectionChange="onChangeSelectionItem" backgroundDesign="Solid">
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title text="Exchange" level="H3"/>
+					<ToolbarSpacer/>
+					<SearchField width="30%" liveChange="onItemTableFreeSearch"></SearchField>
+					<Button icon="sap-icon://pending" type="Transparent" tooltip="{i18n>Hold}" />
+				<!--	<Button icon="sap-icon://edit" type="Transparent" tooltip="{i18n>Edit}" press="onEditItem"
+						enabled="{parts:['SalesHeaderModel>/levelNum','SalesHeaderModel>/processor','SalesHeaderModel>/taskOwner'] , formatter:'.formatter.setEditRestriction'}"/>-->
+					<!--<Button type="Transparent" text="{i18n>Save}" visible="false" press="onSaveEditItem"/>
+					<Button type="Transparent" text="{i18n>Cancel}" visible="false" press="onCancelEditItem"/>-->
+					<!--enabled="{= ${oTaskInboxModel>/workBoxDtos/processor} === ${oTaskInboxModel>/workBoxDtos/taskOwner} ? true : false}"-->
+					<Button icon="sap-icon://accept" type="Accept" tooltip="Approve" class="dkshAcceptBtnStyle" press="onApprovePress"/>
+					<Button icon="sap-icon://decline" type="Reject" tooltip="{i18n>Reject}" class="dkshRejectBtnStyle" press="onRejectPress"/>
+					<Button icon="sap-icon://upload" type="Transparent" tooltip="Submit" press="onItemSubmission"/>
+					<Button icon="sap-icon://display" type="Transparent" tooltip="DisplayActions" press="onDisplayMarkedItems"/>
+					<Button icon="sap-icon://reset" type="Transparent" tooltip="reset" press="onResetDisplay"/>
+				</OverflowToolbar>
+			</headerToolbar>
+		<columns>
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left"
+					class="{'version-modal-header': condition, 'failure': !condition}">
+					<HBox>
+						<Label design="Bold" text="Item No" />
+						<Button icon="sap-icon://drill-down" type="Transparent" tooltip="Sort" press="onDetailTableSortPress" class="dkshAcceptBtnStyle"/>
+					</HBox>
+				</Column>
+		
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Ref Invoice" tooltip="Material"/>
+				
+				</Column>	
+				<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Ref Invoice Item" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Return Reason Item" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="RO Type" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Mat Grp" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Mat Grp4" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Product Code" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Amount" tooltip="Material"/>
+				
+				</Column>
+					<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="SD Block" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+					
+						<Label design="Bold" text="Order No" tooltip="Material"/>
+				
+				</Column>
+						<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left" mergeDuplicates="true">
+					
+						<Label design="Bold" text="Task ID" />
+				
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+			
+							<Text  text="01"/>
+					
+					
+						<Text  text="5320000001"/>
+						<Text  text="Item 01"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="A" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="NEWSOSAP1" textAlign="Left"/>	
+						<Text text="T5" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+					<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+				
+							<Text  text="02"/>
+	
+						<Text  text="5320000001"/>
+					<Text  text="Item02"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="B" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="NEWSOSAP1" textAlign="Left"/>	
+						<Text text="T5" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+					<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+						<Text  text="03"/>
+						<Text  text="5320000002"/>
+						<Text  text="Item03"/>
+						<Text  text="Damaged Material"/>
+					
+					      <Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="E" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+						
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="NEWSOSAP1" textAlign="Left"/>	
+						<Text text="T5" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+						<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="04"/>
+					
+						</VBox>
+						<Text  text="5320000002"/>
+						<Text  text="Item04"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="F" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="NEWSOSAP1" textAlign="Left"/>	
+						<Text text="T5" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+						<ColumnListItem >
+					<customData>
+						<core:CustomData key="stockBlock" value="" writeToDom="true"></core:CustomData>
+						<core:CustomData key="visibility" value="" writeToDom="true"></core:CustomData>
+					</customData>
+					<cells>
+					
+						<VBox>
+							<Text  text="05"/>
+					
+						</VBox>
+						<Text  text="5320000003"/>
+						<Text  text="Item05"/>
+							<Text  text="Damaged Material"/>
+					
+					<Text  text="06"/>
+						<Text text="0001" textAlign="Right"/>
+						<Text	text="TME" textAlign="Right"/>
+					
+						<Text text="G" textAlign="Left"/>
+						<Text text="" textAlign="Left"/>
+					
+						<Text text="X" textAlign="Left"/>
+						
+						<Text text="NEWSOSAP1" textAlign="Left"/>	
+						<Text text="T5" textAlign="Left"/>
+						
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+
+		
+
+			</f:content>
+	
+	
+		</f:DynamicPage>
+			
+</mvc:View>
