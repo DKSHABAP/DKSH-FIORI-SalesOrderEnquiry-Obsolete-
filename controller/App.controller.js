@@ -1,1 +1,11 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){"use strict";return n.extend("incture.com.cherrywork.ConnectClientSalesOrderEnquiry.controller.App",{onInit:function(){}})});
+sap.ui.define([
+	"sap/ui/core/mvc/Controller"
+], function (Controller) {
+	"use strict";
+
+	return Controller.extend("incture.com.cherrywork.ConnectClientSalesOrderEnquiry.controller.App", {
+		onInit: function () {
+
+		}
+	});
+});

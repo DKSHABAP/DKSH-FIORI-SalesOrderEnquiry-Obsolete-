@@ -134,6 +134,16 @@
 										<CheckBox selected="{SaleHdrModelSet>/pendingOrder}"/>
 									</fb:control>
 								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="R" label="{i18n>LocalRefno}" groupName="__$INTERNAL$" visibleInFilterBar="true">
+									<fb:control>
+										<Input value="{SaleHdrModelSet>/DMSNumber}" placeholder="{i18n>EnterLocalRefno}"/>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="S" label="{i18n>BillingNumber}" groupName="__$INTERNAL$" visibleInFilterBar="true">
+									<fb:control>
+										<Input value="{SaleHdrModelSet>/billingNumber}" placeholder="{i18n>EnterBillingNumber}"/>
+									</fb:control>
+								</fb:FilterGroupItem>
 							</fb:filterGroupItems>
 						</fb:FilterBar>
 						<OverflowToolbar class="noBorder" visible="{baseModel>/SearchVisiblity}">
@@ -176,6 +186,9 @@
 								<Label design="Bold" text="{i18n>BillingNumber}" wrapping="true"/>
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
+								<Label design="Bold" text="{i18n>LocalRefno}" wrapping="true"/>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
 								<Label design="Bold" text="{i18n>DeliveryNumber}" wrapping="true"/>
 							</Column>
 							<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Left">
@@ -208,6 +221,7 @@
 										text="{parts: ['oTableModel>customerNumber','oTableModel>customerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
 									<Text text="{oTableModel>netAmount}"></Text>
 									<Text text="{oTableModel>billingNumber}"></Text>
+									<Text text="{oTableModel>DMSNumber}"></Text>
 									<Text text="{oTableModel>deliveryNumber}"></Text>
 									<Text text="{oTableModel>salesTerritory}"></Text>
 									<Text text="{oTableModel>salesTeam}"></Text>
