@@ -1149,7 +1149,7 @@ sap.ui.define([
 							return false;
 						} else {
 							filters.push(new sap.ui.model.Filter("billingNumber", sap.ui.model.FilterOperator.EQ, filterData.billingNumber));
-							//
+						//----STRY0017413
 							filters.push(new sap.ui.model.Filter("distChnl", sap.ui.model.FilterOperator.EQ, filterData.DistChan));
 							filters.push(new sap.ui.model.Filter("division", sap.ui.model.FilterOperator.EQ, filterData.division));
 							filters.push(new sap.ui.model.Filter("salesOrg", sap.ui.model.FilterOperator.EQ, filterData.salesOrg));
