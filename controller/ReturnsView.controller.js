@@ -1077,7 +1077,7 @@ sap.ui.define([
 				return false;
 			}
 		},
-		
+
 		onSearch: function () {
 			debugger;
 			if (this.allAccess) {
@@ -1138,13 +1138,25 @@ sap.ui.define([
 						filters.push(new sap.ui.model.Filter("materialNumber", sap.ui.model.FilterOperator.EQ, filterData.material));
 					if (filterData.customerNumber)
 						filters.push(new sap.ui.model.Filter("customerNumber", sap.ui.model.FilterOperator.EQ, filterData.customerNumber));
-						
-						//DMS Number
+
+					//DMS Number
 					if (filterData.DMSNumber)
 						filters.push(new sap.ui.model.Filter("DMSNumber", sap.ui.model.FilterOperator.EQ, filterData.DMSNumber));
-					if (filterData.billingNumber)
-						filters.push(new sap.ui.model.Filter("billingNumber", sap.ui.model.FilterOperator.EQ, filterData.billingNumber));
-						
+					if (filterData.billingNumber) {
+						// [+]Start Modification - STRY0017413 Invoice Search Enhancement
+						if ( filterData.salesOrg === "" ||  filterData.division === "" || filterData.DistChan === "" ) {
+							sap.m.MessageBox.information(this.getView().getModel("i18n").getProperty("enterFilterSearch"));
+							return false;
+						} else {
+							filters.push(new sap.ui.model.Filter("billingNumber", sap.ui.model.FilterOperator.EQ, filterData.billingNumber));
+							//
+							filters.push(new sap.ui.model.Filter("distChnl", sap.ui.model.FilterOperator.EQ, filterData.DistChan));
+							filters.push(new sap.ui.model.Filter("division", sap.ui.model.FilterOperator.EQ, filterData.division));
+							filters.push(new sap.ui.model.Filter("salesOrg", sap.ui.model.FilterOperator.EQ, filterData.salesOrg));
+						}
+						// [+]End Modification - STRY0017413 Invoice Search Enhancement
+					}
+
 					if (filterData.itemDelivery)
 						filters.push(new sap.ui.model.Filter("itemDeliveryBock", sap.ui.model.FilterOperator.EQ, filterData.itemDelivery));
 					if (filterData.reason)
@@ -1439,7 +1451,7 @@ sap.ui.define([
 			}, {
 				label: 'Billing Number',
 				property: 'billingNumber'
-			},  {
+			}, {
 				label: 'Local Ref No',
 				property: 'DMSNumber'
 			}, {
