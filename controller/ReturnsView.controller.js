@@ -1079,7 +1079,6 @@ sap.ui.define([
 		},
 
 		onSearch: function () {
-			debugger;
 			if (this.allAccess) {
 				var oDataModel = this.getView().getModel("ZDKSH_CC_MASTER_ENQUIRIES_SRV");
 				var filterData = this.getView().getModel("SaleHdrModelSet").getData();
@@ -1142,6 +1141,7 @@ sap.ui.define([
 					//DMS Number
 					if (filterData.DMSNumber)
 						filters.push(new sap.ui.model.Filter("DMSNumber", sap.ui.model.FilterOperator.EQ, filterData.DMSNumber));
+					//Billing Number	
 					if (filterData.billingNumber) {
 						// [+]Start Modification - STRY0017413 Invoice Search Enhancement
 						if ( filterData.salesOrg === "" ||  filterData.division === "" || filterData.DistChan === "" ) {
