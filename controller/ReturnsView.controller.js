@@ -1144,18 +1144,29 @@ sap.ui.define([
 					//Billing Number	
 					if (filterData.billingNumber) {
 						// [+]Start Modification - STRY0017413 Invoice Search Enhancement
-						if ( filterData.salesOrg === "" ||  filterData.division === "" || filterData.DistChan === "" ) {
+						if (filterData.salesOrg === "" || filterData.division === "" || filterData.DistChan === "") {
 							sap.m.MessageBox.information(this.getView().getModel("i18n").getProperty("enterFilterSearch"));
 							return false;
 						} else {
 							filters.push(new sap.ui.model.Filter("billingNumber", sap.ui.model.FilterOperator.EQ, filterData.billingNumber));
-						//----STRY0017413
+							//----STRY0017413
 							filters.push(new sap.ui.model.Filter("distChnl", sap.ui.model.FilterOperator.EQ, filterData.DistChan));
 							filters.push(new sap.ui.model.Filter("division", sap.ui.model.FilterOperator.EQ, filterData.division));
 							filters.push(new sap.ui.model.Filter("salesOrg", sap.ui.model.FilterOperator.EQ, filterData.salesOrg));
 						}
 						// [+]End Modification - STRY0017413 Invoice Search Enhancement
 					}
+					// [+]Start Modification - STRY0017627 Customer PO Number Search
+					//PO Number
+					if (filterData.PONo) {
+						if (filterData.materialGroup === "") {
+							sap.m.MessageBox.information(this.getView().getModel("i18n").getProperty("enterPOSearch"));
+							return false;
+						} else {
+							filters.push(new sap.ui.model.Filter("PONo", sap.ui.model.FilterOperator.EQ, filterData.PONo));
+						}
+					}
+					// [+]End Modification - STRY0017627 Customer PO Number Search
 
 					if (filterData.itemDelivery)
 						filters.push(new sap.ui.model.Filter("itemDeliveryBock", sap.ui.model.FilterOperator.EQ, filterData.itemDelivery));

@@ -144,6 +144,11 @@
 										<Input value="{SaleHdrModelSet>/billingNumber}" placeholder="{i18n>EnterBillingNumber}"/>
 									</fb:control>
 								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="T" label="{i18n>PONo}" groupName="__$INTERNAL$" visibleInFilterBar="true">
+									<fb:control>
+										<Input value="{SaleHdrModelSet>/PONo}" placeholder="{i18n>PONo}"/>
+									</fb:control>
+								</fb:FilterGroupItem>
 							</fb:filterGroupItems>
 						</fb:FilterBar>
 						<OverflowToolbar class="noBorder" visible="{baseModel>/SearchVisiblity}">
