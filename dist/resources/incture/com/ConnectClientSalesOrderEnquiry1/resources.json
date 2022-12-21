@@ -1,0 +1,147 @@
+{
+    "resources": [
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/purchaseOrder.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/resources.json",
+            "merged": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/manifest.json"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/resources/sap-ui-version.json"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/models.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/formatter.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ReturnsView.controller.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ReturnsDetail.controller.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ManageRetExch.controller.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/App.controller.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/Component.js"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/manifest-bundle.zip"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/models-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/model/formatter-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ReturnsView-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ReturnsDetail-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/ManageRetExch-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/controller/App-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/view/ReturnsView.view.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/view/ReturnsDetail.view.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/view/ManageRetExch.view.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/view/App.view.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/i18n/i18n_th.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_th"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/orderType.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/SalesOrg.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/RejectReason.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/Personalization.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/MaterialGroup4.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/MaterialGroup.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/ItemBlock.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/HeaderBlock.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/Division.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/fragments/DistributionChannel.fragment.xml"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/css/style.css"
+        },
+        {
+            "name": "../cherrywork/ConnectClientSalesOrderEnquiry/index.html"
+        }
+    ]
+}

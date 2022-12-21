@@ -1,0 +1,1 @@
+sap.ui.define(["incture/com/cherrywork/ConnectClientSalesOrderEnquiry/controller/App.controller"],function(n){"use strict";QUnit.module("App Controller");QUnit.test("I should test the App controller",function(t){var e=new n;e.onInit();t.ok(e)})});

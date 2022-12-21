@@ -1,0 +1,310 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "incture.com.cherrywork.ConnectClientSalesOrderEnquiry",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"ZDKSH_CC_HDR_LOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_HDR_LOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_HDR_LOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_MATERIAL_LOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_MATERIAL_LOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_MATERIAL_LOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_ITM_LOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_ITM_LOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_ITM_LOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZCC_MATERIAL_DATA_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZCC_MATERIAL_DATA_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZCC_MATERIAL_DATA_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_CUST_MASTER_ENQ_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_CUST_MASTER_ENQ_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_CUST_MASTER_ENQ_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_ORDER_REASONS_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_ORDER_REASONS_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_ORDER_REASONS_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_DAC_MATLOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_DAC_MATLOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_DAC_MATLOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_DAC_SOLDTOPARTY_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_DAC_SOLDTOPARTY_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_DAC_SOLDTOPARTY_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_DAC_LOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_DAC_LOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_DAC_LOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_INVENTORY_HDRLOOKUP_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_INVENTORY_HDRLOOKUP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_INVENTORY_HDRLOOKUP_SRV/metadata.xml"
+				}
+			},
+			"ZDKSH_CC_MASTER_ENQUIRIES_SRV": {
+				"uri": "/DKSHODataService/sap/opu/odata/sap/ZDKSH_CC_MASTER_ENQUIRIES_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZDKSH_CC_MASTER_ENQUIRIES_SRV/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"fullWidth": true
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "incture.com.cherrywork.ConnectClientSalesOrderEnquiry.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "incture.com.cherrywork.ConnectClientSalesOrderEnquiry.i18n.i18n"
+				}
+			},
+			"ODataNewService": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_HDR_LOOKUP_SRV",
+				"preload": true
+			},
+			"ODataMatService": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_MATERIAL_LOOKUP_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_ITM_LOOKUP_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_ITM_LOOKUP_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_ORDER_REASONS_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_ORDER_REASONS_SRV",
+				"preload": true
+			},
+			"ZCC_MATERIAL_DATA_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZCC_MATERIAL_DATA_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_CUST_MASTER_ENQ_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_CUST_MASTER_ENQ_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_DAC_MATLOOKUP_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_DAC_MATLOOKUP_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_DAC_SOLDTOPARTY_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_DAC_SOLDTOPARTY_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_DAC_LOOKUP_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_DAC_LOOKUP_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_INVENTORY_HDRLOOKUP_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_INVENTORY_HDRLOOKUP_SRV",
+				"preload": true
+			},
+			"ZDKSH_CC_MASTER_ENQUIRIES_SRV": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZDKSH_CC_MASTER_ENQUIRIES_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "incture.com.cherrywork.ConnectClientSalesOrderEnquiry.view",
+				"controlAggregation": "pages",
+				"controlId": "app"
+			},
+			"routes": [
+				{
+					"name": "ReturnsView",
+					"pattern": "",
+					"target": [
+						"ReturnsView"
+					]
+				},
+				{
+					"name": "ReturnsDetail",
+					"pattern": "ReturnsDetail/{index}",
+					"target": [
+						"ReturnsDetail"
+					]
+				}
+			],
+			"targets": {
+				"ReturnsDetail": {
+					"viewType": "XML",
+					"viewName": "ReturnsDetail"
+				},
+				"ReturnsView": {
+					"viewType": "XML",
+					"viewName": "ReturnsView"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

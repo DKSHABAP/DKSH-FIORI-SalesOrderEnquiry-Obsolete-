@@ -1,0 +1,201 @@
+/* Enter your custom styles here */
+
+.detailTable .sapMLIB.sapMListTblRow {
+    border-bottom: 0;
+    HEIGHT: 0REM;
+}
+
+.sapMInputBaseContentWrapper:not(.sapMInputBaseReadonlyWrapper):not(.sapMInputBaseContentWrapperState):not(.sapMInputBaseDisabledWrapper):hover {
+    background: #fff;
+    border-color: #ab1032;
+}
+
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent::after,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 2.5rem;
+    left: -0.188rem;
+    padding: .094rem .188rem;
+    border-top-left-radius: .125rem;
+    border-top-right-radius: .125rem;
+    background-color: #ab2031 !important;
+}
+
+.sapMDialog>header.sapMDialogTitle .sapMTitle {
+    color: black!important;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.sapMInputBaseIconContainer .sapMInputBaseIcon {
+    color: #ab2031 !important;
+}
+
+.sapUiSizeCompact .sapMInputBase:not(.sapMInputBaseHasEndIcons):not(.sapMInputBaseHasBeginIcons) .sapMInputBaseContentWrapper {
+    min-width: 0;
+}
+
+.sapUiCalHead>.sapUiCalHeadB,
+.sapUiCalCancel,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:hover,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
+    color: #ab2031 !important;
+}
+
+.sapUiCalItem.sapUiCalItemSel:not(.sapUiCalItemSelBetween) {
+    background-color: #ab2031 !important;
+}
+
+.sapUiCalItemSelBetween,
+.sapUiCalItemSelBetween.sapUiCalItemOtherMonth {
+    background-color: #f5acb5 !important;
+    color: #32363a;
+}
+
+.sapUiCalItem.sapUiCalItemSel.sapUiCalItemSelBetween:not(.sapUiCalItemNow)>.sapUiCalItemText {
+    border: .0625rem solid #ab2031;
+    border-radius: 0.25rem;
+}
+
+.sapUiCalHead>.sapUiCalHeadB,
+.sapUiCalCancel,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:hover,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
+    color: #ab2031 !important;
+}
+
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnDefault .sapMBtnContent {
+    overflow: visible;
+    color: #ab2031 !important;
+}
+
+.sapUxAPObjectPageLayout-Std-Desktop .sapUxAPBlockContainer {
+    padding: 0 !important;
+}
+
+.sapUiRespGrid.sapUiRespGridHSpace1 {
+    padding: 0;
+}
+
+.sapUiRespGrid.sapUiRespGridHSpace1 {
+    padding: 0;
+}
+
+.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace1>.sapUiRespGridSpanL12 {
+    width: 100%;
+}
+
+.sapUiCompSmartChartHeader {
+    visibility: hidden
+}
+
+.vboxCls {
+    width: fit-content;
+}
+
+.sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+    padding: 1rem !important;
+}
+
+.sapMLabel {
+    font-weight: bold;
+}
+
+.sapUiCompFilterBar {
+    background-color: #fff;
+    border-bottom: 0 !important;
+}
+
+.errorColor .sapMInputBaseContentWrapper {
+    background: #b00 !important;
+    /*border-bottom: 2px solid red !important;*/
+}
+
+.warningColor .sapMInputBaseContentWrapper {
+    background: #e9730c !important;
+    /*border-bottom: 2px solid red !important;*/
+}
+
+.successrColor .sapMInputBaseContentWrapper {
+    background: #107e3e !important;
+    /*border-bottom: 2px solid red !important;*/
+}
+
+
+/*.inputCls{*/
+
+
+/*	visibility:hidden;*/
+
+
+/*}*/
+
+.tableCls.sapMList {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+    padding: 0 1rem!important;
+}
+
+.noBorder.sapMTB {
+    border-bottom: 0 !important;
+    background: white;
+}
+
+.sapUiCompFilterBarToolbar {
+    border-bottom-style: none;
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.sapMTB-Transparent-CTX.sapMTB {
+    padding: 0;
+}
+
+.sapMTB {
+    height: 2.75rem;
+    padding: 0 1rem;
+    background: transparent;
+}
+
+.sapUiFormResGridCont>.sapUiFormElementLbl>.sapMLabel {
+    width: auto;
+}
+
+.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL6 {
+    width: auto;
+    padding-right: 0rem !important;
+}
+
+.sapUiSizeCompact .sapUxAPBlockContainerDesktop {
+    padding: 1rem !important;
+}
+
+.sapMListTblHighlightCol+.sapMListTblHeaderCell,
+.sapMListTblHighlightCell+.sapMListTblCell {
+    padding-left: 1.3rem;
+}
+
+.sapUiSizeCompact .sapUxAPObjectPageSectionHeader {
+    height: 2.5rem;
+    line-height: 2rem;
+    padding-left: 1.5rem;
+}
+
+.sapUxAPAnchorBar.sapMTB,
+html.sapUiMedia-Std-Desktop .sapMSplitContainer.sapMSplitContainerHideMode .sapMSplitContainerDetail .sapUxAPAnchorBar.sapMTB {
+    padding-left: 0.5rem !important;
+}
+
+.sapUiFormResGridCont>.sapUiFormElementLbl {
+    width: auto !important;
+    min-height: 18px;
+    padding-right: 0 !important;
+}

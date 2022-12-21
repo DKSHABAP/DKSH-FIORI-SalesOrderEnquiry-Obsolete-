@@ -1,0 +1,313 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid" xmlns:fb="sap.ui.comp.filterbar" xmlns:vm="sap.ui.comp.variants" xmlns:uxap="sap.uxap"
+	controllerName="incture.com.cherrywork.ConnectClientSalesOrderEnquiry.controller.ReturnsDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<Table id="ID_OBJ_HDR" fixedLayout="false" inset="false" visible="true" class="detailTable">
+						<columns>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="70%" popinDisplay="Inline"/>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left" width="30%" popinDisplay="Inline"/>
+						</columns>
+						<ColumnListItem>
+							<VBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>OrderNo.}:"/>
+									<Text text="{oTableModel>/data/salesDocNumber}" class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>OrderDate}:"/>
+									<Text text="{ parts: ['oTableModel>/data/documentDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"
+										class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>CreditCheck}:"/>
+									<Text text="{oTableModel>/data/creditCheck}" class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>Orderreason}:"/>
+									<Text
+										text="{parts: ['oTableModel>/data/orderReason','oTableModel>/data/orderReaText'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										class="sapUiTinyMarginBegin"/>
+								</HBox>
+							</VBox>
+							<VBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>Customer}:"/>
+									<Text
+										text="{parts: ['oTableModel>/data/customerNumber','oTableModel>/data/customerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>CustomerPO.}:"/>
+									<Text text="{oTableModel>/data/customerPO}" class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>HeaderBlock}:"/>
+									<Text
+										text="{parts: ['oTableModel>/data/headerDeliveryBlock','oTableModel>/data/headerDlvBlockText'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										class="sapUiTinyMarginBegin"/>
+								</HBox>
+								<!--<HBox>-->
+								<!--	<Label design="Bold" text="Vendor Material:"/>-->
+								<!--	<Text text="{oTableModel>/data/vendorMatNum}" class="sapUiTinyMarginBegin"/>-->
+								<!--</HBox>-->
+							</VBox>
+						</ColumnListItem>
+					</Table>
+					<uxap:ObjectPageLayout id="ObjectPageLayout">
+						<uxap:sections>
+							<uxap:ObjectPageSection id="personalSection" title="{i18n>Items}">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="personalSectionSS1">
+										<uxap:blocks>
+											<VBox>
+												<OverflowToolbar>
+													<ToolbarSpacer/>
+													<Button icon="sap-icon://action-settings" press="personalizationInvDetails" tooltip="{i18n>Personalization}"></Button>
+												</OverflowToolbar>
+												<Table inset="false" fixedLayout="true" backgroundDesign="Solid" items="{oitemsModel>/results}">
+													<columns>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/0/status}" minScreenWidth="Small" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>ItemNo.}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/1/status}" minScreenWidth="XSmall" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Material}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/2/status}" minScreenWidth="Small" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>MaterialGroup}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/3/status}" minScreenWidth="Small" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>MaterialGroup4}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/4/status}" minScreenWidth="Small" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>MaterialGroup1}" wrapping="true"/>
+														</Column>
+														<!--visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/4/status}"-->
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/18/status}" minScreenWidth="Desktop" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>VendorMat.}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/5/status}" minScreenWidth="XSmall" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>SalesQty(Unit)}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/6/status}" minScreenWidth="Desktop" demandPopin="true"
+															popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>FOCQty(Unit)}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/7/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>ListPrice}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/8/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>SpecialPrice}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/9/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>NetAmount}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/10/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Batch(Exp)}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/11/status}" hAlign="Left" minScreenWidth="XSmall"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Itemblock}" wrapping="true"/>
+														</Column>
+														<!--<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/1/status}" demandPopin="true" hAlign="Left">-->
+														<!--	<Label design="Bold" text="Back order description" wrapping="true"/>-->
+														<!--</Column>-->
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/12/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Rejectionreason}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/13/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Usage}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/14/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>SLOC}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/15/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin=" true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>ShippingPoint}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/16/status}" hAlign="Left" minScreenWidth="Small"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>HighLevel}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/17/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>Status}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/19/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>SalesTeam}" wrapping="true"/>
+														</Column>
+														<Column visible="{PersonalizationModel>/personalizationInvoiceData/userPersonaDto/20/status}" hAlign="Left" minScreenWidth="Desktop"
+															demandPopin="true" popinDisplay="Inline">
+															<Label design="Bold" text="{i18n>SalesTerritory}" wrapping="true"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<Text text="{oitemsModel>itemNumber}"></Text>
+															<Text
+																text="{parts: ['oitemsModel>materialNumber','oitemsModel>materialDescription'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{oitemsModel>materialGroup}"></Text>
+															<Text text="{oitemsModel>materialGroup4}"></Text>
+															<Text text="{oitemsModel>materialGroup1}"></Text>
+															<Text text="{oitemsModel>vendorMatNum}"></Text>
+															<Text text="{parts: ['oitemsModel>qtySold','oitemsModel>salesUnit'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{parts: ['oitemsModel>focQty','oitemsModel>salesUnit'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{oitemsModel>listPrice}"></Text>
+															<Text text="{oitemsModel>specialPrice}"></Text>
+															<Text text="{oitemsModel>netAmount}"></Text>
+															<Text
+																text="{parts: ['oitemsModel>batchNum','oitemsModel>expiryDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.expiryDateBind'}"></Text>
+															<Text
+																text="{parts: ['oitemsModel>itemDlvBlockText','oitemsModel>itemDeliveryBock'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<!--<Text text="{oitemsModel>backOrderDescription}"></Text>-->
+															<Text
+																text="{parts: ['oitemsModel>rejectReason','oitemsModel>rejectDescription'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{oitemsModel>use}"></Text>
+															<Text
+																text="{parts: ['oitemsModel>storageLocation','oitemsModel>storageLocDesc'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{oitemsModel>shippingPoint}"></Text>
+															<Text text="{oitemsModel>highLevel}"></Text>
+															<VBox items="{oitemsModel>b2bstatus}">
+																<Text text="{oitemsModel>}"/>
+															</VBox>
+															<Text text="{oitemsModel>salesTeam}"></Text>
+															<Text text="{oitemsModel>salesTerritory}"></Text>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							<uxap:ObjectPageSection id="employmentSection2" title="{i18n>DocFlow}">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="employmentSectionSS3">
+										<uxap:blocks>
+											<VBox>
+												<Table visible="{oNewModel>/firstdoc}" alternateRowColors="true" showSeparators="None" class="sapUiSizeCompact sapUiTinyMarginTop"
+													inset="false" fixedLayout="false" items="{oDocFlowModel>/results}">
+													<columns>
+														<Column>
+															<Label text="{i18n>DeliveryNumber}" design="Bold"/>
+														</Column>
+														<Column>
+															<Label text="{i18n>DeliveryDate}" design="Bold"/>
+														</Column>
+														<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Inline">
+															<Label text="{i18n>BillingNumber}" design="Bold"/>
+														</Column>
+														<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Inline">
+															<Label text="{i18n>BillingDate}" design="Bold"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<Text text="{oDocFlowModel>deliveryNum}"></Text>
+															<Text text="{parts: ['oDocFlowModel>deliveryDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"></Text>
+															<Text text="{oDocFlowModel>billingNumber}"></Text>
+															<Text text="{parts: ['oDocFlowModel>billingDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"></Text>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							<uxap:ObjectPageSection title="{i18n>BusinessPartners}">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection>
+										<uxap:blocks>
+											<VBox class="vboxCls">
+												<Table visible="{oNewModel>/firstdoc}" alternateRowColors="true" showSeparators="None" class="sapUiSizeCompact sapUiTinyMarginTop"
+													inset="false" fixedLayout="false" items="{oBMModel>/array}">
+													<columns>
+														<Column>
+															<Label text="{i18n>Role}" design="Bold"/>
+														</Column>
+														<Column>
+															<Label text="{i18n>Name}" design="Bold"/>
+														</Column>
+														<Column demandPopin="true" minScreenWidth="Tablet">
+															<Label text="{i18n>Address}" design="Bold"/>
+														</Column>
+													</columns>
+													<items>
+														<ColumnListItem>
+															<cells>
+																<Text text="{parts: ['oBMModel>partnerfunc'],formatter:'incture.com.MaterialEnquiry.model.formatter.bpmFormatter'}"></Text>
+																<Text text="{parts: ['oBMModel>partnerNumber','oBMModel>partnerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																<Text text="{oBMModel>address}"></Text>
+															</cells>
+														</ColumnListItem>
+													</items>
+												</Table>
+											</VBox>
+										</uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							<uxap:ObjectPageSection title="{i18n>MoreDetails}">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection>
+										<uxap:blocks>
+											<VBox>
+												<f:SimpleForm minWidth="1024" layout="ResponsiveGridLayout" maxContainerCols="2" editable="false" labelSpanL="6" labelSpanM="6"
+													labelSpanS="4" emptySpanL="1" emptySpanM="1" emptySpanS="1" columnsL="2" columnsM="2">
+													<f:content>
+														<!--<core:Title/>-->
+														<!--<Label text="Customer PO" design="Bold"/>-->
+														<!--<Text text="{oTableModel>/results/0/HeaderToItemNav/results/0/customerPO}"/>-->
+														<Label text="{i18n>OrderType}" design="Bold"/>
+														<Text text="{oTableModel>/data/salesDocType}"/>
+														<Label text="{i18n>DistChannel}" design="Bold"/>
+														<Text
+															text="{parts: ['oTableModel>/data/distChnl','oTableModel>/data/dcName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+														<Label text="{i18n>AROText}" design="Bold"/>
+														<Text text="{oTableModel>/data/aroText}"/>
+														<Label text="{i18n>FootNote}" design="Bold"/>
+														<Text text="{oTableModel>/data/footNote}"/>
+														<Label text="{i18n>Customer(Local)}" design="Bold"/>
+														<Text text="{oTableModel>/data/custThaiName}"/>
+														<Label text="{i18n>PaymentTerm}" design="Bold"/>
+														<Text text="{oTableModel>/data/term}"/>
+														<Label text="{i18n>YourReference}" design="Bold"/>
+														<Text text="{oTableModel>/data/yourRef}"></Text>
+														<Label text="{i18n>Province}" design="Bold"/>
+														<Text text="{oTableModel>/data/provinceName}"/>
+														<Label text="{i18n>POType}" design="Bold"/>
+														<Text
+															text="{parts: ['oTableModel>/data/purchaseOrderType','oTableModel>/data/purchaseOrderTypeDesc'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+														<!--<core:Title/>-->
+													</f:content>
+												</f:SimpleForm>
+											</VBox>
+										</uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+						</uxap:sections>
+					</uxap:ObjectPageLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
