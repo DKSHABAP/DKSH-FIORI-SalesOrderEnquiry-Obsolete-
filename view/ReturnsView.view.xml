@@ -48,7 +48,7 @@
 								<fb:FilterGroupItem name="F" label="PO Type" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet >/poType','SaleHdrModelSet>/poTypeDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/poType','SaleHdrModelSet>/poTypeDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/poType}" maxLength="100" showValueHelp="true" valueHelpRequest="handlePO" valueHelpOnly="true"
 											placeholder="Select PO Type"/>
 									</fb:control>
