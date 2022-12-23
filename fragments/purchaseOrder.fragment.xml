@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:ui="sap.ui.table" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
 	<SelectDialog title="Purchase Order Type" liveChange="onLivePO" confirm="handleAddPO" cancel="handleCancelOt"
 		items="{purchaseOrderModel>/results}" class="sapUiSizeCompact">
-		<StandardListItem title="{parts: ['purchaseOrderModel>purchaseOrderType','purchaseOrderModel>poTypeDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}" type="Active"
-			tooltip="{parts: ['purchaseOrderModel>purchaseOrderType','purchaseOrderModel>poTypeDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+		<StandardListItem title="{parts: ['purchaseOrderModel>purchaseOrderType','purchaseOrderModel>poTypeDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}" type="Active"
+			tooltip="{parts: ['purchaseOrderModel>purchaseOrderType','purchaseOrderModel>poTypeDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"/>
 	</SelectDialog>
 </core:FragmentDefinition>

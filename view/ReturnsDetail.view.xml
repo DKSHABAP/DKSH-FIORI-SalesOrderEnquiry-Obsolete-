@@ -18,7 +18,7 @@
 								</HBox>
 								<HBox>
 									<Label design="Bold" text="{i18n>OrderDate}:"/>
-									<Text text="{ parts: ['oTableModel>/data/documentDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"
+									<Text text="{ parts: ['oTableModel>/data/documentDate'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter'}"
 										class="sapUiTinyMarginBegin"/>
 								</HBox>
 								<HBox>
@@ -28,7 +28,7 @@
 								<HBox>
 									<Label design="Bold" text="{i18n>Orderreason}:"/>
 									<Text
-										text="{parts: ['oTableModel>/data/orderReason','oTableModel>/data/orderReaText'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										text="{parts: ['oTableModel>/data/orderReason','oTableModel>/data/orderReaText'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 										class="sapUiTinyMarginBegin"/>
 								</HBox>
 							</VBox>
@@ -36,7 +36,7 @@
 								<HBox>
 									<Label design="Bold" text="{i18n>Customer}:"/>
 									<Text
-										text="{parts: ['oTableModel>/data/customerNumber','oTableModel>/data/customerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										text="{parts: ['oTableModel>/data/customerNumber','oTableModel>/data/customerName'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 										class="sapUiTinyMarginBegin"/>
 								</HBox>
 								<HBox>
@@ -46,7 +46,7 @@
 								<HBox>
 									<Label design="Bold" text="{i18n>HeaderBlock}:"/>
 									<Text
-										text="{parts: ['oTableModel>/data/headerDeliveryBlock','oTableModel>/data/headerDlvBlockText'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+										text="{parts: ['oTableModel>/data/headerDeliveryBlock','oTableModel>/data/headerDlvBlockText'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 										class="sapUiTinyMarginBegin"/>
 								</HBox>
 								<!--<HBox>-->
@@ -162,26 +162,26 @@
 														<ColumnListItem>
 															<Text text="{oitemsModel>itemNumber}"></Text>
 															<Text
-																text="{parts: ['oitemsModel>materialNumber','oitemsModel>materialDescription'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																text="{parts: ['oitemsModel>materialNumber','oitemsModel>materialDescription'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 															<Text text="{oitemsModel>materialGroup}"></Text>
 															<Text text="{oitemsModel>materialGroup4}"></Text>
 															<Text text="{oitemsModel>materialGroup1}"></Text>
 															<Text text="{oitemsModel>vendorMatNum}"></Text>
-															<Text text="{parts: ['oitemsModel>qtySold','oitemsModel>salesUnit'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
-															<Text text="{parts: ['oitemsModel>focQty','oitemsModel>salesUnit'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{parts: ['oitemsModel>qtySold','oitemsModel>salesUnit'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
+															<Text text="{parts: ['oitemsModel>focQty','oitemsModel>salesUnit'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 															<Text text="{oitemsModel>listPrice}"></Text>
 															<Text text="{oitemsModel>specialPrice}"></Text>
 															<Text text="{oitemsModel>netAmount}"></Text>
 															<Text
-																text="{parts: ['oitemsModel>batchNum','oitemsModel>expiryDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.expiryDateBind'}"></Text>
+																text="{parts: ['oitemsModel>batchNum','oitemsModel>expiryDate'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.expiryDateBind'}"></Text>
 															<Text
-																text="{parts: ['oitemsModel>itemDlvBlockText','oitemsModel>itemDeliveryBock'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																text="{parts: ['oitemsModel>itemDlvBlockText','oitemsModel>itemDeliveryBock'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 															<!--<Text text="{oitemsModel>backOrderDescription}"></Text>-->
 															<Text
-																text="{parts: ['oitemsModel>rejectReason','oitemsModel>rejectDescription'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																text="{parts: ['oitemsModel>rejectReason','oitemsModel>rejectDescription'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 															<Text text="{oitemsModel>use}"></Text>
 															<Text
-																text="{parts: ['oitemsModel>storageLocation','oitemsModel>storageLocDesc'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																text="{parts: ['oitemsModel>storageLocation','oitemsModel>storageLocDesc'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 															<Text text="{oitemsModel>shippingPoint}"></Text>
 															<Text text="{oitemsModel>highLevel}"></Text>
 															<VBox items="{oitemsModel>b2bstatus}">
@@ -221,9 +221,9 @@
 													<items>
 														<ColumnListItem>
 															<Text text="{oDocFlowModel>deliveryNum}"></Text>
-															<Text text="{parts: ['oDocFlowModel>deliveryDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"></Text>
+															<Text text="{parts: ['oDocFlowModel>deliveryDate'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter'}"></Text>
 															<Text text="{oDocFlowModel>billingNumber}"></Text>
-															<Text text="{parts: ['oDocFlowModel>billingDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"></Text>
+															<Text text="{parts: ['oDocFlowModel>billingDate'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter'}"></Text>
 														</ColumnListItem>
 													</items>
 												</Table>
@@ -253,8 +253,8 @@
 													<items>
 														<ColumnListItem>
 															<cells>
-																<Text text="{parts: ['oBMModel>partnerfunc'],formatter:'incture.com.MaterialEnquiry.model.formatter.bpmFormatter'}"></Text>
-																<Text text="{parts: ['oBMModel>partnerNumber','oBMModel>partnerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+																<Text text="{parts: ['oBMModel>partnerfunc'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.bpmFormatter'}"></Text>
+																<Text text="{parts: ['oBMModel>partnerNumber','oBMModel>partnerName'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 																<Text text="{oBMModel>address}"></Text>
 															</cells>
 														</ColumnListItem>
@@ -280,7 +280,7 @@
 														<Text text="{oTableModel>/data/salesDocType}"/>
 														<Label text="{i18n>DistChannel}" design="Bold"/>
 														<Text
-															text="{parts: ['oTableModel>/data/distChnl','oTableModel>/data/dcName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+															text="{parts: ['oTableModel>/data/distChnl','oTableModel>/data/dcName'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"/>
 														<Label text="{i18n>AROText}" design="Bold"/>
 														<Text text="{oTableModel>/data/aroText}"/>
 														<Label text="{i18n>FootNote}" design="Bold"/>
@@ -295,7 +295,7 @@
 														<Text text="{oTableModel>/data/provinceName}"/>
 														<Label text="{i18n>POType}" design="Bold"/>
 														<Text
-															text="{parts: ['oTableModel>/data/purchaseOrderType','oTableModel>/data/purchaseOrderTypeDesc'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+															text="{parts: ['oTableModel>/data/purchaseOrderType','oTableModel>/data/purchaseOrderTypeDesc'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"/>
 														<!--<core:Title/>-->
 													</f:content>
 												</f:SimpleForm>

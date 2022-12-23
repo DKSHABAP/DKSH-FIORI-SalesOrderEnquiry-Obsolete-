@@ -19,22 +19,22 @@
 								<fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="{i18n>SalesOrg}" visibleInFilterBar="true">
 									<fb:control>
 										<Input placeholder="{i18n>SelectSalesOrg}"
-											value="{parts: ['SaleHdrModelSet>/salesOrg','SaleHdrModelSet>/SalesOrgDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/salesOrg','SaleHdrModelSet>/SalesOrgDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/salesOrg}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpRequestSalesOrg" valueHelpOnly="true"/>
 									</fb:control>
 								</fb:FilterGroupItem>
 								<fb:FilterGroupItem groupName="__$INTERNAL$" name="H8" label="{i18n>DistChannel}" labelTooltip="Tooltip Example" visibleInFilterBar="true">
 									<fb:control>
 										<Input valueHelpOnly="true" placeholder="{i18n>SelectDistributionChannel}"
-											value="{parts: ['SaleHdrModelSet>/DistChan','SaleHdrModelSet>/DistChanDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
-											tooltip="{parts: ['SaleHdrModelSet>/DistChan','SaleHdrModelSet>/DistChanDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/DistChan','SaleHdrModelSet>/DistChanDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
+											tooltip="{parts: ['SaleHdrModelSet>/DistChan','SaleHdrModelSet>/DistChanDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											visible="{oDefaultFilterModel>/soFilterVisible}" showValueHelp="true" valueHelpRequest="valueHelpRequestDistChan" id="idFilterDistChan"/>
 									</fb:control>
 								</fb:FilterGroupItem>
 								<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="{i18n>Division}" labelTooltip="Tooltip Example" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/division','SaleHdrModelSet>/DivisionDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/division','SaleHdrModelSet>/DivisionDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/division}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpRequestDivision" valueHelpOnly="true"
 											placeholder="{i18n>SelectDivision}"/>
 									</fb:control>
@@ -48,7 +48,7 @@
 								<fb:FilterGroupItem name="F" label="PO Type" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/poType','SaleHdrModelSet>/poTypeDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/poType','SaleHdrModelSet>/poTypeDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/poType}" maxLength="100" showValueHelp="true" valueHelpRequest="handlePO" valueHelpOnly="true"
 											placeholder="Select PO Type"/>
 									</fb:control>
@@ -81,7 +81,7 @@
 								<fb:FilterGroupItem name="J" label="Material Group" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/materialGroup','SaleHdrModelSet>/materialGroupDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/materialGroup','SaleHdrModelSet>/materialGroupDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/matGroup}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpRequestMaterialGrp"
 											valueHelpOnly="true" placeholder="Select Material Group"/>
 									</fb:control>
@@ -89,7 +89,7 @@
 								<fb:FilterGroupItem name="K" label="Material Group4" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/materialGroup4','SaleHdrModelSet>/materialGroup4Desc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/materialGroup4','SaleHdrModelSet>/materialGroup4Desc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/matGroup4}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpRequestMaterialGrp4"
 											valueHelpOnly="true" placeholder="{i18n>SelectMaterialGroup4}"/>
 									</fb:control>
@@ -107,14 +107,14 @@
 								<fb:FilterGroupItem name="N" label="Header Delivery Block" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input type="Text"
-											value="{parts: ['SaleHdrModelSet>/deliveryBlock','SaleHdrModelSet>/delBlockDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/deliveryBlock','SaleHdrModelSet>/delBlockDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											placeholder="Select Header Dlv Block" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="handleVHDB"/>
 									</fb:control>
 								</fb:FilterGroupItem>
 								<fb:FilterGroupItem name="O" label="Item Delivery Block" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/itemDelivery','SaleHdrModelSet>/itemDeliveryDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/itemDelivery','SaleHdrModelSet>/itemDeliveryDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/itemDelivery}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpItemDelivery" valueHelpOnly="true"
 											placeholder="Select Item Delivery Block"/>
 										<!--<Input value="{SaleHdrModelSet>/itemDelivery}" placeholder="Enter Item Delivery Block"/>-->
@@ -123,7 +123,7 @@
 								<fb:FilterGroupItem name="P" label="Rejection Reason" groupName="__$INTERNAL$" visibleInFilterBar="true">
 									<fb:control>
 										<Input
-											value="{parts: ['SaleHdrModelSet>/reason','SaleHdrModelSet>/reasonDesc'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+											value="{parts: ['SaleHdrModelSet>/reason','SaleHdrModelSet>/reasonDesc'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 											tooltip="{SaleHdrModelSet>/reason}" maxLength="100" showValueHelp="true" valueHelpRequest="valueHelpRequestReason" valueHelpOnly="true"
 											placeholder="Enter Rejection Reason"/>
 										<!--<Input value="{SaleHdrModelSet>/reason}" placeholder="Enter Rejection Reason"/>-->
@@ -156,7 +156,7 @@
 					<Table inset="false" fixedLayout="true" id="idRet1" backgroundDesign="Solid" items="{oTableModel>/results}" class="tableCls">
 						<headerToolbar>
 							<OverflowToolbar>
-								<Title text="{i18n>SalesOrderDetails}{path:'oTableModel>/results',formatter:'incture.com.MaterialEnquiry.model.formatter.getLength'}"
+								<Title text="{i18n>SalesOrderDetails}{path:'oTableModel>/results',formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.getLength'}"
 									level="H4" titleStyle="H4"></Title>
 								<ToolbarSpacer/>
 								<SearchField liveChange="onLiveChange" width="30%" id="searchField"></SearchField>
@@ -208,17 +208,17 @@
 							<ColumnListItem type="Navigation" press="onNavigateToDetail">
 								<cells>
 									<!--<ObjectStatus text="{oTableModel>salesDocNumber}"-->
-									<!--	state="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.MaterialEnquiry.model.formatter.colorState'}"/>-->
+									<!--	state="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.colorState'}"/>-->
 									<!--<Input editable="true" class="inputCls" width="1rem"-->
-									<!--	visible="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.MaterialEnquiry.model.formatter.colorCode'}"/>-->
+									<!--	visible="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.colorCode'}"/>-->
 									<Text text="{oTableModel>salesDocNumber}"
-										visible="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.MaterialEnquiry.model.formatter.colorState'}"></Text>
+										visible="{parts: ['oTableModel>salesDocNumber','oTableModel>billingNumber','oTableModel>deliveryNumber'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.colorState'}"></Text>
 									<Text text="{oTableModel>fdocumentDate}"></Text>
 									<Text
-										text="{parts: ['oTableModel>purchaseOrderType','oTableModel>purchaseOrderTypeDesc'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
-									<!--<Text text="{parts: ['oTableModel>documentDate'],formatter:'incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter'}"></Text>-->
+										text="{parts: ['oTableModel>purchaseOrderType','oTableModel>purchaseOrderTypeDesc'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
+									<!--<Text text="{parts: ['oTableModel>documentDate'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter'}"></Text>-->
 									<Text
-										text="{parts: ['oTableModel>customerNumber','oTableModel>customerName'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+										text="{parts: ['oTableModel>customerNumber','oTableModel>customerName'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 									<Text text="{oTableModel>netAmount}"></Text>
 									<Text text="{oTableModel>billingNumber}"></Text>
 									<Text text="{oTableModel>DMSNumber}"></Text>
@@ -226,9 +226,9 @@
 									<Text text="{oTableModel>salesTerritory}"></Text>
 									<Text text="{oTableModel>salesTeam}"></Text>
 									<Text
-										text="{parts: ['oTableModel>materialNumber','oTableModel>materialDescription'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+										text="{parts: ['oTableModel>materialNumber','oTableModel>materialDescription'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>
 									<!--<Text-->
-									<!--	text="{parts: ['oTableModel>itemDeliveryBock','oTableModel>headerDlvBlockText'],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>-->
+									<!--	text="{parts: ['oTableModel>itemDeliveryBock','oTableModel>headerDlvBlockText'],formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"></Text>-->
 								</cells>
 							</ColumnListItem>
 						</items>

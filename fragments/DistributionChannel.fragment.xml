@@ -2,8 +2,8 @@
 	<SelectDialog title="{i18n>DistributionChannel}" liveChange="onLiveChangeDistChan" confirm="handleAddDistChan" cancel="handleCancelDistChan"
 		items="{DistChanSet>/results}" class="sapUiSizeCompact">
 		<StandardListItem
-			title="{parts: ['DistChanSet>DistChl','DistChanSet>Name'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"
+			title="{parts: ['DistChanSet>DistChl','DistChanSet>Name'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"
 			type="Active"
-			tooltip="{parts: ['DistChanSet>DistChl','DistChanSet>Name'], formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"/>
+			tooltip="{parts: ['DistChanSet>DistChl','DistChanSet>Name'], formatter:'incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind'}"/>
 	</SelectDialog>
 </core:FragmentDefinition>

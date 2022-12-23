@@ -1,6 +1,6 @@
-jQuery.sap.declare("incture.com.MaterialEnquiry.model.formatter");
+jQuery.sap.declare("incture.com.ConnectClientMatEnquiry.model.formatter");
 
-incture.com.MaterialEnquiry.model.formatter = {
+incture.com.ConnectClientMatEnquiry.model.formatter = {
 	dateFormatter: function (e) {
 		if (!e)
 			return "";
