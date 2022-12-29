@@ -1159,7 +1159,7 @@ sap.ui.define([
 					// [+]Start Modification - STRY0017627 Customer PO Number Search
 					//PO Number
 					if (filterData.PONo) {
-						if (filterData.materialGroup === "") {
+						if (filterData.materialGroup === "" && !filterData.salesOrderFrom && !filterData.salesOrderTo) {
 							sap.m.MessageBox.information(this.getView().getModel("i18n").getProperty("enterPOSearch"));
 							return false;
 						} else {
