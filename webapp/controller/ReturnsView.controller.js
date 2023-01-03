@@ -1159,7 +1159,7 @@ sap.ui.define([
 					// [+]Start Modification - STRY0017627 Customer PO Number Search
 					//PO Number
 					if (filterData.PONo) {
-						if (filterData.materialGroup === "") {
+						if (filterData.materialGroup === "" && !filterData.salesOrderFrom && !filterData.salesOrderTo) {
 							sap.m.MessageBox.information(this.getView().getModel("i18n").getProperty("enterPOSearch"));
 							return false;
 						} else {
@@ -1240,7 +1240,7 @@ sap.ui.define([
 							oTableModel.setProperty("/results1", oData.results);
 							// if (oData.results.length > 0) {
 							// for (var i = 0; i < oData.results.length; i++) {
-							// 	oTableModel.getData().results[i].fdocumentDate = incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter(
+							// 	oTableModel.getData().results[i].fdocumentDate = incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter(
 							// 		oTableModel.getData()
 							// 		.results[i].documentDate);
 							// 	if (oData.results[i].HeaderToItemNav.results && oData.results[i].HeaderToItemNav.results.length > 0) {
@@ -1256,7 +1256,7 @@ sap.ui.define([
 										for (var j = 0; j < oData.results[i].HeaderToItemNav.results.length; j++) {
 											oTableModel.getData().results.push({
 												"salesDocNumber": oData.results[i].salesDocNumber,
-												"fdocumentDate": incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter(oData.results[i].documentDate),
+												"fdocumentDate": incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter(oData.results[i].documentDate),
 												"customerNumber": oData.results[i].customerNumber,
 												"customerName": oData.results[i].customerName,
 												"netAmount": oData.results[i].HeaderToItemNav.results[j].netAmount,
@@ -1393,18 +1393,18 @@ sap.ui.define([
 					var object = objectIsNew[i].HeaderToItemNav.results;
 					newObj.push({
 						salesDocNumber: objectIsNew[i].salesDocNumber,
-						fdocumentDate: incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter(objectIsNew[i].documentDate),
-						cCustomer: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(objectIsNew[i].customerNumber, objectIsNew[i].customerName),
+						fdocumentDate: incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter(objectIsNew[i].documentDate),
+						cCustomer: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(objectIsNew[i].customerNumber, objectIsNew[i].customerName),
 						salesTerritory: object[j].salesTerritory,
 						salesTeam: object[j].salesTeam,
 						creditCheck: objectIsNew[i].creditCheck,
-						cOrderReason: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(objectIsNew[i].orderReason, objectIsNew[i].orderReaText),
+						cOrderReason: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(objectIsNew[i].orderReason, objectIsNew[i].orderReaText),
 						customerPO: objectIsNew[i].customerPO,
-						cHdb: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(objectIsNew[i].headerDeliveryBlock, objectIsNew[i].headerDlvBlockText),
+						cHdb: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(objectIsNew[i].headerDeliveryBlock, objectIsNew[i].headerDlvBlockText),
 						address: objectIsNew[i].HeaderToPartnersNav.results[0].address,
 						salesDocType: objectIsNew[i].salesDocType,
-						cDC: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(objectIsNew[i].distChnl, objectIsNew[i].dcName),
-						cPO: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(objectIsNew[i].purchaseOrderType, objectIsNew[i].purchaseOrderTypeDesc),
+						cDC: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(objectIsNew[i].distChnl, objectIsNew[i].dcName),
+						cPO: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(objectIsNew[i].purchaseOrderType, objectIsNew[i].purchaseOrderTypeDesc),
 						aroText: objectIsNew[i].aroText,
 						footNote: objectIsNew[i].footNote,
 						custThaiName: objectIsNew[i].custThaiName,
@@ -1414,26 +1414,26 @@ sap.ui.define([
 						billingNumber: object[j].billingNumber,
 						DMSNumber: object[j].DMSNumber,
 						deliveryNumber: object[j].deliveryNum,
-						deliveryDate: incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter(object[j].deliveryDate),
-						billingDate: incture.com.MaterialEnquiry.model.formatter.dateDetailFormatter(object[j].billingDate),
+						deliveryDate: incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter(object[j].deliveryDate),
+						billingDate: incture.com.ConnectClientMatEnquiry.model.formatter.dateDetailFormatter(object[j].billingDate),
 
 						itemNum: object[j].itemNumber,
-						cMatNum: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].materialNumber, object[j].materialDescription),
+						cMatNum: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].materialNumber, object[j].materialDescription),
 						materialGroup: object[j].materialGroup,
 						materialGroup4: object[j].materialGroup4,
 						materialGroup1: object[j].materialGroup1,
 						vendorMatNum: object[j].vendorMatNum,
-						cQty: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].qtySold, object[j].salesUnit),
-						cFOC: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].focQty, object[j].salesUnit),
+						cQty: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].qtySold, object[j].salesUnit),
+						cFOC: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].focQty, object[j].salesUnit),
 						listPrice: object[j].listPrice,
 						specialPrice: object[j].specialPrice,
 						netAmount: object[j].netAmount,
-						batchNum: incture.com.MaterialEnquiry.model.formatter.expiryDateBind(object[j].batchNum, object[j].expiryDate),
-						itemDeliveryBock: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].itemDeliveryBock, object[j]
+						batchNum: incture.com.ConnectClientMatEnquiry.model.formatter.expiryDateBind(object[j].batchNum, object[j].expiryDate),
+						itemDeliveryBock: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].itemDeliveryBock, object[j]
 							.itemDlvBlockText),
-						rejectReason: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].rejectReason, object[j].rejectDescription),
+						rejectReason: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].rejectReason, object[j].rejectDescription),
 						use: object[j].use,
-						storageLocation: incture.com.MaterialEnquiry.model.formatter.f4ValueBind(object[j].storageLocation, object[j].storageLocDesc),
+						storageLocation: incture.com.ConnectClientMatEnquiry.model.formatter.f4ValueBind(object[j].storageLocation, object[j].storageLocDesc),
 						shippingPoint: object[j].shippingPoint,
 						highLevel: object[j].highLevel,
 						b2bStatus: object[j].b2bStatus.replace(/[@]/g, ' ')

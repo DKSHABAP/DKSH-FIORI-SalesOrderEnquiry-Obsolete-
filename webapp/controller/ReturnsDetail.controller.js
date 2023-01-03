@@ -249,12 +249,10 @@ sap.ui.define([
 			this.FilterPersonalization.getModel("FilterPersonalization").refresh();
 		},
 		onVariantSave: function (oEvent) {
-		
 			if (this.selectedObjects.length === 0) {
 			MessageToast.show(this.getView().getModel("i18n").getProperty("saveAfterEdit"));
 				return;
 			}
-				debugger;
 			var that = this;
 			var oModel = new sap.ui.model.json.JSONModel();
 			var PersonalizationModel = this.FilterPersonalization.getModel("FilterPersonalization");
