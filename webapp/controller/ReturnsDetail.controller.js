@@ -155,7 +155,8 @@ sap.ui.define([
 		},
 		personalizationInvDetails: function (oEvent) {
 			if (!this.FilterPersonalization) {
-				this.FilterPersonalization = sap.ui.xmlfragment("incture.com.cherrywork.ConnectClientSalesOrderEnquiry.view.fragments.Personalization",
+				// this.FilterPersonalization = sap.ui.xmlfragment("incture.com.cherrywork.ConnectClientSalesOrderEnquiry.view.fragments.Personalization",
+				 this.FilterPersonalization = sap.ui.xmlfragment("incture.com.cherrywork.ConnectClientSalesOrderEnquiry.fragments.Personalization",
 					this);
 				this.getView().addDependent(this.FilterPersonalization);
 			}
